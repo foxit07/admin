@@ -11,9 +11,9 @@ data-locale="ru-RU"
 
 
 
-data-click-to-select="true"
+{{--data-click-to-select="true"
 data-ignore-click-to-select-on
-data-multiple-select-row="true"
+data-multiple-select-row="true"--}}
 
 data-classes="table table-bordered table-hover"     {{--Класс таблицы--}}
 data-thead-classes="thead-light"                    {{-- Клас хедера--}}
@@ -29,7 +29,7 @@ data-page-list="[10, 25, 50, 100, 200, All]"
 
 data-side-pagination="server"
 {{--data-query-params="queryParams"--}}
-data-url="/admin/users"
+
 
 
 

@@ -1,24 +1,20 @@
-<table data-toggle="table">
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach($permissions as $permission)
+@extends('admin::layouts.template.app')
+
+@section('content')
+    <div id="toolbar">
+        <div class="form-inline" role="form">
+            <a href="{{route('permissions.create')}}" class="btn btn-success">Add Permission</a>
+        </div>
+    </div>
+
+    <table @include('admin::layouts.table.setting')  data-url="/admin/ajax/permissions">
+        <thead>
         <tr>
-            <td>{{ $permission->id }}</td>
-            <td>{{ $permission->name }}</td>
-            <td>
-                @include('admin::layouts.form.action', [
-                    'id' => $permission->id,
-                    'edit' => 'permissions.edit',
-                    'destroy' => 'permissions.destroy',
-                ])
-            </td>
+            <th data-field="id" data-sortable="true">ID</th>
+            <th data-field="name" data-sortable="true">Name</th>
+            <th data-field="action">Action</th>
         </tr>
-    @endforeach
-    </tbody>
-</table>
+        </thead>
+    </table>
+
+@endsection

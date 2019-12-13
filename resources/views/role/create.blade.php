@@ -1,12 +1,24 @@
+@extends('admin::layouts.template.app')
+
+@section('content')
+
 <form action="{{ route('roles.store') }}" method="POST">
     {{ csrf_field() }}
-    <input type="text" name="name">
+    <div class="form-group">
+        <label for="name">Role</label>
+        <input id="name" type="text" name="name" class="form-control">
+    </div>
 
-    @foreach($permissions as $permission)
-        <label for="checkbox[]"> {{ $permission->name }}</label>
-        <input type="checkbox" id="checkbox[]" name="permission[]" value="{{ $permission->id }}">
-        <br>
+    @foreach($permissions as $key => $permission)
+        <div class="form-check">
+            <input type="checkbox" id="checkbox-{{ $key }}" name="permission[]" value="{{ $permission->id }}" class="form-check-input">
+            <label for="checkbox-{{ $key }}"  class="form-check-label"> {{ $permission->name }}</label>
+        </div>
     @endforeach
 
-    <button type="submit"> Create </button>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary"> Create </button>
+    </div>
 </form>
+
+@endsection

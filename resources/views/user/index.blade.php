@@ -3,13 +3,14 @@
 @section('content')
 
 <div id="toolbar">
-    <a href="{{route('users.create')}}" class="btn btn-success">Add User</a>
+    <div class="form-inline" role="form">
+        <a href="{{route('users.create')}}" class="btn btn-success">Add User</a>
+    </div>
 </div>
 
-<table @include('admin::layouts.table.setting') >
+<table @include('admin::layouts.table.setting')  data-url="/admin/ajax/users">
     <thead>
     <tr>
-        <th data-field="state" data-checkbox="true"></th>
         <th data-field="id" data-sortable="true">ID</th>
         <th data-field="name" data-sortable="true">Name</th>
         <th data-field="role" >Roles</th>
