@@ -9,6 +9,8 @@
         <label for="name">Role</label>
         <input type="text" name="name" value="{{ $role->name }}" class="form-control">
     </div>
+
+    <div class="form-group">
     @foreach($permissions as $permission)
         @php
             $hasPermission = false
@@ -33,8 +35,10 @@
             </div>
         @endif
     @endforeach
+    </div>
+
     <div class="form-group">
-        <button type="submit" class="btn btn-warning">Update</button>
+        <button type="submit" class="btn btn-warning ">{{ __('admin_lang::table.btn_update') }}</button>
     </div>
 </form>
 @endsection

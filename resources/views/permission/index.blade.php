@@ -3,7 +3,7 @@
 @section('content')
     <div id="toolbar">
         <div class="form-inline" role="form">
-            <a href="{{route('permissions.create')}}" class="btn btn-success">Add Permission</a>
+            <a href="{{route('permissions.create')}}" class="btn btn-success">{{ __('admin_lang::table.add_permission') }}</a>
         </div>
     </div>
 

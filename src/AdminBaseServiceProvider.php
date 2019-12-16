@@ -31,7 +31,7 @@ class AdminBaseServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
-
+        $this->loadTranslationsFrom(__DIR__.'/../resources/translations' , 'admin_lang');
         $this->registerRoutes();
     }
 
@@ -41,6 +41,10 @@ class AdminBaseServiceProvider extends ServiceProvider
 
         $this->publishes([__DIR__.'/../resources/publishable/assets' => public_path('foxit07/admin')], 'admin-assets');
         $this->publishes([__DIR__.'/../database/seeds' => database_path('seeds')], 'admin-seeds');
+
+
+
+       /* $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/foxit07/admin')], 'admin-lang');*/
     }
 
     protected function registerRoutes()
@@ -57,7 +61,7 @@ class AdminBaseServiceProvider extends ServiceProvider
     {
         return [
             'prefix' => 'admin',
-            'middleware' => ['web'],
+            'middleware' => ['web', 'auth'],
             'namespace' => 'Foxit07\Admin\Http\Controllers'
         ];
     }

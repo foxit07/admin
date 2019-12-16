@@ -8,5 +8,7 @@
     "/css/bootstrap-table.css": "/css/bootstrap-table.css",
     "/js/core.js": "/js/core.js",
     "/css/fontawesome-free.css": "/css/fontawesome-free.css",
-    "/js/app.js": "/js/app.js"
+    "/js/app.js": "/js/app.js",
+    "/js/bootstrap-table-mobile-ru.js": "/js/bootstrap-table-mobile-ru.js",
+    "/js/bootstrap-table-ru.js": "/js/bootstrap-table-ru.js"
 }

@@ -61,7 +61,6 @@
 <script src="{{ asset("foxit07/admin/js/app.js") }}"></script>
 <script src="{{ asset("foxit07/admin/js/admin.js") }}"></script>
 <script src="{{ asset("foxit07/admin/js/bootstrap-table.js") }}"></script>
-<script src="{{ asset("foxit07/admin/js/bootstrap-table-mobile.js") }}"></script>
 
 @stack('scripts')
 </body>

@@ -14,8 +14,11 @@ mix.combine([
     './node_modules/startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.js',
 ], publicPath + "/js/app.js")
     .js('./node_modules/startbootstrap-sb-admin-2/js/sb-admin-2.js',  publicPath + "/js/admin.js")
-    .js('./node_modules/bootstrap-table/src/bootstrap-table.js', publicPath + "/js/bootstrap-table.js")
-    .js('./node_modules/bootstrap-table-mobile/bootstrap-table-mobile.js', publicPath + "/js/bootstrap-table-mobile.js")
+    .js(['./node_modules/bootstrap-table/src/bootstrap-table.js',
+        './node_modules/bootstrap-table-mobile/bootstrap-table-mobile.js',
+        './node_modules/bootstrap-table/src/locale/bootstrap-table-ru-RU.js',
+    ], publicPath + "/js/bootstrap-table.js")
+
     .sass("./node_modules/startbootstrap-sb-admin-2/scss/sb-admin-2.scss", publicPath + "/css/admin.css")
     .sass("./node_modules/bootstrap-table/src/bootstrap-table.scss", publicPath + "/css/bootstrap-table.css")
     .styles("./node_modules/startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.css", publicPath + "/css/fontawesome-free.css")
