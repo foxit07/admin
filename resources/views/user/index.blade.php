@@ -18,5 +18,6 @@
     </tr>
     </thead>
 </table>
+
 @endsection
 

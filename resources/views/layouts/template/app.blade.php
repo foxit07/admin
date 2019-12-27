@@ -22,38 +22,42 @@
 </head>
 
 <body id="page-top">
-
+<div id="app">
 <!-- Page Wrapper -->
 <div id="wrapper">
 
-    <!-- Sidebar -->
-@include('admin::layouts.template.sidebar')
-<!-- End of Sidebar -->
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Sidebar -->
+    @include('admin::layouts.template.sidebar')
+    <!-- End of Sidebar -->
 
-        <!-- Main Content -->
-    @include('admin::layouts.template.main')
-    <!-- End of Main Content -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+        @include('admin::layouts.template.main')
+        <!-- End of Main Content -->
 
-        <!-- Footer -->
-    @include('admin::layouts.template.footer')
-    <!-- End of Footer -->
+            <!-- Footer -->
+        @include('admin::layouts.template.footer')
+        <!-- End of Footer -->
 
+        </div>
+        <!-- End of Content Wrapper -->
+
+
+
+        <flash-component
+                :message="{{ json_encode(session()->get('message')) }}"
+        ></flash-component>
     </div>
-    <!-- End of Content Wrapper -->
-
 </div>
 <!-- End of Page Wrapper -->
+
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
-
-
-
 
 <!-- Custom scripts for all pages-->
 <script src="{{ asset("foxit07/admin/js/manifest.js") }}"></script>

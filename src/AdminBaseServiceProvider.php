@@ -7,6 +7,8 @@ namespace Foxit07\Admin;
 use Foxit07\Admin\Console\InstallCommand;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Contracts\Debug\ExceptionHandler;
+use Foxit07\Admin\Exceptions\Handler;
 
 class AdminBaseServiceProvider extends ServiceProvider
 {
@@ -18,6 +20,11 @@ class AdminBaseServiceProvider extends ServiceProvider
         }
 
         $this->registerResources();
+
+        $this->app->bind(
+            ExceptionHandler::class,
+            Handler::class
+        );
     }
 
     public function register()

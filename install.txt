@@ -1,0 +1,54 @@
+Установка пакета
+
+composer require foxit07/admin
+
+php artisan admin:install
+
+******************************************
+
+Добавление роутов
+
+   'menu' => [
+       'users' => [
+           'iconClass' => 'fa fa-user',
+           'subMenu' => [
+               'users' => [  - это пункт меню
+                    'routeName' => 'users.index', - это имя роута
+               ],
+               'roles' => [
+                   'routeName' => 'roles.index',
+               ],
+               'permissions' => [
+                   'routeName' => 'permissions.index',
+               ]
+           ]
+       ],
+   ],
+
+***********************************************************
+
+Добавление ролей
+
+В контроллер добавляем трейт
+
+Authorizable
+
+Как работает Authorizable
+
+$abilities = [
+        'index' => 'view',
+        'edit' => 'edit',
+        'show' => 'view',
+        'update' => 'edit',
+        'create' => 'add',
+        'store' => 'add',
+        'destroy' => 'delete'
+];
+Этот массив переволиться в разрешения типа
+view_users
+add_users
+edit_users
+delete_users
+
+view, add, edit, delete - это разрешения
+users - это модель

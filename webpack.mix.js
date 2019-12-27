@@ -3,15 +3,23 @@ require("laravel-mix-merge-manifest");
 
 if (mix.inProduction()) {
     mix.version();
+}else{
+    console.log(__dirname)
 }
+
+mix.autoload({
+    jquery: ['$', 'window.jQuery', 'jQuery'],
+});
+
 
 let publicPath = "resources/publishable/assets";
 
-mix.combine([
+mix.js([
     './node_modules/startbootstrap-sb-admin-2/vendor/jquery/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
     './node_modules/startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.js',
     './node_modules/startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.js',
+    'resources/js/app.js'
 ], publicPath + "/js/app.js")
     .js('./node_modules/startbootstrap-sb-admin-2/js/sb-admin-2.js',  publicPath + "/js/admin.js")
     .js(['./node_modules/bootstrap-table/src/bootstrap-table.js',

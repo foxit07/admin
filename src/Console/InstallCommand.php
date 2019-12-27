@@ -15,19 +15,11 @@ class InstallCommand extends Command
 
     public function handle()
     {
-        if(is_null(config('admin'))){
-            $this->warn('Please publish the config file by running ' .
-
-            ' \'php artisan vendor:publish --tag=press-config\'');
-          /*  return false;*/
-        }
 
         $this->call('vendor:publish', [
             '--force' => true,
             '--tag' => 'admin-config'
         ]);
-
-
 
     }
 }

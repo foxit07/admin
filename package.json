@@ -28,6 +28,7 @@
     "bootstrap-table-mobile": "^1.0.0",
     "laravel-mix-merge-manifest": "^0.1.2",
     "popper": "^1.0.1",
-    "startbootstrap-sb-admin-2": "^4.0.7"
+    "startbootstrap-sb-admin-2": "^4.0.7",
+    "vue-flash-message": "^0.7.2"
   }
 }
