@@ -4,6 +4,8 @@ composer require foxit07/admin
 
 php artisan admin:install
 
+php artisan migrate
+
 ******************************************
 
 Добавление роутов
@@ -44,7 +46,8 @@ $abilities = [
         'store' => 'add',
         'destroy' => 'delete'
 ];
-Этот массив переволиться в разрешения типа
+
+Этот массив переводиться в разрешения типа
 view_users
 add_users
 edit_users

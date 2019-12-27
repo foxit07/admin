@@ -17,7 +17,7 @@
     "autoload": {
         "psr-4": {
             "Foxit07\\Admin\\" : "src/"
-        },
+        }
     },
     "autoload-dev": {
         "psr-4": {
