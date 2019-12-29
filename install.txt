@@ -4,6 +4,17 @@ composer require foxit07/admin
 
 php artisan admin:install
 
+php artisan migrate
+
+php artisan vendor:publish --tag=admin-seed
+
+composer dump-autoload
+
+Add  use HasRoles in model User
+
+php artisan db:seed --class=PermissionsTableSeeder
+
+
 ******************************************
 
 Добавление роутов
@@ -44,7 +55,8 @@ $abilities = [
         'store' => 'add',
         'destroy' => 'delete'
 ];
-Этот массив переволиться в разрешения типа
+
+Этот массив переводиться в разрешения типа
 view_users
 add_users
 edit_users

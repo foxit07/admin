@@ -1,9 +1,7 @@
 <?php
 
 
-
 use Illuminate\Database\Seeder;
-use Foxit07\Admin\Models\User;
 use Foxit07\Admin\Models\Permission;
 use Foxit07\Admin\Models\Role;
 use Illuminate\Support\Facades\Hash;
