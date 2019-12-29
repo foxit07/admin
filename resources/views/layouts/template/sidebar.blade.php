@@ -18,10 +18,15 @@
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+
 
 <!-- Меню  -->
     @foreach(config('admin.menu') as $key => $menu)
+        <hr class="sidebar-divider">
+        @if($key == 'users' &&  !\Auth::user()->hasRole('admin'))
+            @continue
+        @endif
+
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-{{ $key }}" aria-expanded="true" aria-controls="collapse-{{ $key }}">
                 <i class="{{ $menu['iconClass'] }}"></i>
@@ -36,9 +41,10 @@
                 </div>
             </div>
         </li>
+        <hr class="sidebar-divider d-none d-md-block">
     @endforeach
     <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
+
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
