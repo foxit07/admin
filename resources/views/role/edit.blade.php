@@ -38,7 +38,7 @@
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-warning ">{{ __('admin_lang::table.btn_update') }}</button>
+        <button type="submit" class="btn btn-warning ">{{ __('admin-lang::table.btn_update') }}</button>
     </div>
 </form>
 @endsection

@@ -7,6 +7,5 @@ return [
         'roles' => 'Роли',
         'permissions' => 'Разрешения',
         'users_component' => 'Компоненты пользователя'
-
     ]
 ];

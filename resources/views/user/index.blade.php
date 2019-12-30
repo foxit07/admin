@@ -4,7 +4,7 @@
 
 <div id="toolbar">
     <div class="form-inline" role="form">
-        <a href="{{route('users.create')}}" class="btn btn-success">{{ __('admin_lang::table.add_user') }}</a>
+        <a href="{{route('users.create')}}" class="btn btn-success">{{ __('admin-lang::table.add_user') }}</a>
     </div>
 </div>
 

@@ -14,7 +14,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="{{ route('dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>{{  __('admin_lang::menu.sidebar.dashboard') }}</span></a>
+            <span>{{  __('admin-lang::menu.sidebar.dashboard') }}</span></a>
     </li>
 
     <!-- Divider -->
@@ -30,13 +30,13 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-{{ $key }}" aria-expanded="true" aria-controls="collapse-{{ $key }}">
                 <i class="{{ $menu['iconClass'] }}"></i>
-                <span>{{ __('admin_lang::menu.sidebar.' . $key) }}</span>
+                <span>{{ __('admin-lang::menu.sidebar.' . $key) }}</span>
             </a>
             <div id="collapse-{{ $key }}" class="collapse" aria-labelledby="heading-{{ $key }}" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header"> {{ __('admin_lang::menu.sidebar.' . $key . '_component') }}</h6>
+                    <h6 class="collapse-header"> {{ __('admin-lang::menu.sidebar.' . $key . '_component') }}</h6>
                     @foreach($menu['subMenu'] as $subKey => $subMenu)
-                        <a class="collapse-item" href="{{ route($subMenu['routeName']) }}">{{ __('admin_lang::menu.sidebar.' . $subKey) }}</a>
+                        <a class="collapse-item" href="{{ route($subMenu['routeName']) }}">{{ __('admin-lang::menu.sidebar.' . $subKey) }}</a>
                     @endforeach
                 </div>
             </div>
