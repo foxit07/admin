@@ -10,7 +10,13 @@ php artisan vendor:publish --tag=admin-seed
 
 composer dump-autoload
 
+
 php artisan db:seed --class=PermissionsTableSeeder
+
+Add  use HasRoles in model User
+
+php artisan db:seed --class=PermissionsTableSeeder
+
 ******************************************
 
 Добавление роутов

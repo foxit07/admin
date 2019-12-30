@@ -38,7 +38,7 @@ class AdminBaseServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
-        $this->loadTranslationsFrom(__DIR__.'/../resources/translations' , 'admin_lang');
+        $this->loadTranslationsFrom(__DIR__.'/../resources/lang' , 'admin-lang');
         $this->registerRoutes();
     }
 
