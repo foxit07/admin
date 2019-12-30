@@ -9,7 +9,7 @@
         <input id="name" type="text" name="name" class="form-control">
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-primary"> {{ __('admin_lang::table.btn_save') }}</button>
+        <button type="submit" class="btn btn-primary"> {{ __('admin-lang::table.btn_save') }}</button>
     </div>
 </form>
 

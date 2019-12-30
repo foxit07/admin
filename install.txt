@@ -17,6 +17,8 @@ Add  use HasRoles in model User
 
 php artisan db:seed --class=PermissionsTableSeeder
 
+Меняем запасной язык на русский
+
 ******************************************
 
 Добавление роутов
