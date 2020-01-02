@@ -4,18 +4,13 @@ composer require foxit07/admin
 
 php artisan admin:install
 
-php artisan migrate
-
-php artisan vendor:publish --tag=admin-seed
-
 composer dump-autoload
 
+php artisan migrate
 
 php artisan db:seed --class=PermissionsTableSeeder
 
-Add  use HasRoles in model User
-
-php artisan db:seed --class=PermissionsTableSeeder
+Add trait HasRoles in model User
 
 Меняем запасной язык на русский
 

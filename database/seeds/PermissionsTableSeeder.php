@@ -16,7 +16,7 @@ class PermissionsTableSeeder extends Seeder
     public function run()
     {
         // Ask for db migration refresh, default is no
-        if ($this->command->confirm('Do you wish to refresh migration before seeding, it will clear all old data ?')) {
+        if ($this->command->confirm('Do you wish to refresh migration before seeding, it will clear all old data ?', false)) {
             // Call the php artisan migrate:refresh
             $this->command->call('migrate:fresh');
             $this->command->warn("Data cleared, starting from blank database.");
@@ -53,16 +53,11 @@ class PermissionsTableSeeder extends Seeder
      */
     private function createUser($role)
     {
-        User::create([
+        $user = User::firstOrCreate([
             'name' => 'Admin',
             'email' => 'admin@admin.ru',
             'password' => Hash::make('111111'),
-        ]);
-
-       $user = User::where('name', 'Admin')->first();
-
-        $user->assignRole($role);
-
+        ])->assignRole($role);
 
             $this->command->info('Here is your admin details to login:');
             $this->command->warn($user->email);

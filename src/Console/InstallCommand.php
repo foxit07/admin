@@ -16,11 +16,22 @@ class InstallCommand extends Command
     public function handle()
     {
 
+
+
         $this->call('vendor:publish', [
             '--force' => true,
-            '--tag' => 'admin-config'
+            '--tag' => ['admin-config', 'admin-seeds', 'admin-assets']
         ]);
 
+
+        $this->call('migrate');
+
+        exec('composer dump-autoload');
+
+
+       $this->call('db:seed', [
+            '--class' => 'PermissionsTableSeeder'
+        ]);
     }
 }
 
