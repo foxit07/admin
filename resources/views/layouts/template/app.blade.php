@@ -60,6 +60,7 @@
 </a>
 
 <!-- Custom scripts for all pages-->
+<script src="{{ asset("foxit07/admin/js/jquery.min.js") }}"></script>
 <script src="{{ asset("foxit07/admin/js/manifest.js") }}"></script>
 <script src="{{ asset("foxit07/admin/js/vendor.js") }}"></script>
 <script src="{{ asset("foxit07/admin/js/app.js") }}"></script>

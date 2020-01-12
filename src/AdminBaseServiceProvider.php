@@ -51,7 +51,7 @@ class AdminBaseServiceProvider extends ServiceProvider
 
 
 
-       /* $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/foxit07/admin')], 'admin-lang');*/
+        $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/foxit07/admin')], 'admin-lang');
     }
 
     protected function registerRoutes()

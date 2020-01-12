@@ -19,10 +19,10 @@
 
     <!-- Divider -->
 
-
-<!-- Меню  -->
+    <hr class="sidebar-divider">
+    <!-- Меню  -->
     @foreach(config('admin.menu') as $key => $menu)
-        <hr class="sidebar-divider">
+
         @if($key == 'users' &&  !\Auth::user()->hasRole('admin'))
             @continue
         @endif
@@ -42,8 +42,8 @@
             </div>
         </li>
         <hr class="sidebar-divider d-none d-md-block">
-    @endforeach
-    <!-- Divider -->
+@endforeach
+<!-- Divider -->
 
 
     <!-- Sidebar Toggler (Sidebar) -->

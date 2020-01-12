@@ -14,8 +14,10 @@ mix.autoload({
 
 let publicPath = "resources/publishable/assets";
 
+mix.copy('./node_modules/jquery/dist/jquery.min.js', publicPath + "/js/jquery.min.js")
+
+
 mix.js([
-    './node_modules/startbootstrap-sb-admin-2/vendor/jquery/jquery.js',
     './node_modules/popper.js/dist/umd/popper.js',
     './node_modules/startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.js',
     './node_modules/startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.js',
