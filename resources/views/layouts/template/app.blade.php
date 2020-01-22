@@ -12,12 +12,12 @@
     <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('foxit07/admin/css/fontawesome-free.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('vendor/admin/css/fontawesome-free.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="{{asset('foxit07/admin/css/admin.css')}}" rel="stylesheet">
-    <link href="{{asset('foxit07/admin/css/bootstrap-table.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/admin/css/admin.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/admin/css/bootstrap-table.css')}}" rel="stylesheet">
 
 </head>
 
@@ -60,12 +60,12 @@
 </a>
 
 <!-- Custom scripts for all pages-->
-<script src="{{ asset("foxit07/admin/js/jquery.min.js") }}"></script>
-<script src="{{ asset("foxit07/admin/js/manifest.js") }}"></script>
-<script src="{{ asset("foxit07/admin/js/vendor.js") }}"></script>
-<script src="{{ asset("foxit07/admin/js/app.js") }}"></script>
-<script src="{{ asset("foxit07/admin/js/admin.js") }}"></script>
-<script src="{{ asset("foxit07/admin/js/bootstrap-table.js") }}"></script>
+<script src="{{ asset("vendor/admin/js/jquery.min.js") }}"></script>
+<script src="{{ asset("vendor/admin/js/manifest.js") }}"></script>
+<script src="{{ asset("vendor/admin/js/vendor.js") }}"></script>
+<script src="{{ asset("vendor/admin/js/app.js") }}"></script>
+<script src="{{ asset("vendor/admin/js/admin.js") }}"></script>
+<script src="{{ asset("vendor/admin/js/bootstrap-table.js") }}"></script>
 
 @stack('scripts')
 </body>

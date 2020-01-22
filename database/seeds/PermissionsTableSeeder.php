@@ -4,6 +4,7 @@
 use Illuminate\Database\Seeder;
 use Foxit07\Admin\Models\Permission;
 use Foxit07\Admin\Models\Role;
+use App\User;
 use Illuminate\Support\Facades\Hash;
 
 class PermissionsTableSeeder extends Seeder
@@ -55,13 +56,13 @@ class PermissionsTableSeeder extends Seeder
     {
         $user = User::firstOrCreate([
             'name' => 'Admin',
-            'email' => 'admin@admin.ru',
-            'password' => Hash::make('111111'),
+            'email' => 'admin@mail.com',
+            'password' => Hash::make('123456'),
         ])->assignRole($role);
 
             $this->command->info('Here is your admin details to login:');
             $this->command->warn($user->email);
-            $this->command->warn('Password is "111111"');
+            $this->command->warn('Password is "123456"');
 
     }
 

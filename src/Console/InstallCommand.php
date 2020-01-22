@@ -16,10 +16,7 @@ class InstallCommand extends Command
     public function handle()
     {
 
-
-
         $this->call('vendor:publish', [
-            '--force' => true,
             '--tag' => ['admin-config', 'admin-seeds', 'admin-assets']
         ]);
 

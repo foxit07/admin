@@ -45,13 +45,9 @@ class AdminBaseServiceProvider extends ServiceProvider
     protected function registerPublishing()
     {
         $this->publishes([__DIR__.'/../config/admin.php' => config_path('admin.php')], 'admin-config');
-
-        $this->publishes([__DIR__.'/../resources/publishable/assets' => public_path('foxit07/admin')], 'admin-assets');
+        $this->publishes([__DIR__.'/../resources/publishable/assets' => public_path('vendor/admin')], 'admin-assets');
         $this->publishes([__DIR__.'/../database/seeds' => database_path('seeds')], 'admin-seeds');
-
-
-
-        $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/foxit07/admin')], 'admin-lang');
+        $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/vendor/admin')], 'admin-lang');
     }
 
     protected function registerRoutes()
