@@ -22,7 +22,7 @@
 </head>
 
 <body id="page-top">
-<div id="app">
+
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -32,8 +32,10 @@
     <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
+
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
+
         @include('admin::layouts.template.main')
         <!-- End of Main Content -->
 
@@ -41,15 +43,15 @@
         @include('admin::layouts.template.footer')
         <!-- End of Footer -->
 
-        </div>
-        <!-- End of Content Wrapper -->
 
+        <!-- End of Content Wrapper -->
+    </div>
 
 
         <flash-component
                 :message="{{ json_encode(session()->get('message')) }}"
         ></flash-component>
-    </div>
+
 </div>
 <!-- End of Page Wrapper -->
 
@@ -60,12 +62,8 @@
 </a>
 
 <!-- Custom scripts for all pages-->
-<script src="{{ asset("vendor/admin/js/jquery.min.js") }}"></script>
-<script src="{{ asset("vendor/admin/js/manifest.js") }}"></script>
-<script src="{{ asset("vendor/admin/js/vendor.js") }}"></script>
+
 <script src="{{ asset("vendor/admin/js/app.js") }}"></script>
-<script src="{{ asset("vendor/admin/js/admin.js") }}"></script>
-<script src="{{ asset("vendor/admin/js/bootstrap-table.js") }}"></script>
 
 @stack('scripts')
 </body>

@@ -46,6 +46,7 @@ class AdminBaseServiceProvider extends ServiceProvider
     {
         $this->publishes([__DIR__.'/../config/admin.php' => config_path('admin.php')], 'admin-config');
         $this->publishes([__DIR__.'/../resources/publishable/assets' => public_path('vendor/admin')], 'admin-assets');
+        $this->publishes([__DIR__.'/../resources/js' => resource_path('vendor/admin')], 'admin-assets');
         $this->publishes([__DIR__.'/../database/seeds' => database_path('seeds')], 'admin-seeds');
         $this->publishes([__DIR__.'/../resources/lang' => resource_path('lang/vendor/admin')], 'admin-lang');
     }

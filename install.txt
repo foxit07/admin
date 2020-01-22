@@ -14,6 +14,13 @@ Add trait HasRoles in model User
 
 Меняем запасной язык на русский
 
+Добавляем в webpack.mix строку  .js('resources/vendor/admin/vue.js', 'public/vendor/admin/js/vue.js')
+
+npm i startbootstrap-sb-admin-2
+npm i vue-flash-message
+
+
+
 ******************************************
 
 Добавление роутов

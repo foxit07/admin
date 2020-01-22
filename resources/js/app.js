@@ -8,9 +8,6 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-
-
-
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -24,15 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('flash-component', require('./components/FlashComponent.vue').default);
 
-var adminComponentsFile = "../../../../resources/js/vendor/admin/components.js";
 
-
-console.log(__dirname);
-
-/*if(require(adminComponentsFile)){
-    require(adminComponentsFile);
-    console.log(require(adminComponentsFile))
-}*/
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -42,3 +31,4 @@ console.log(__dirname);
 const app = new Vue({
     el: '#app',
 });
+

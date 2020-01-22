@@ -6,7 +6,9 @@
 
     <!-- Begin Page Content -->
     <div class="container-fluid">
-        @yield('content')
+        <div id="app" >
+            @yield('content')
+        </div>
     </div>
     <!-- /.container-fluid -->
 
